@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einladung Kultur am Eck - Februar 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Outfit:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c1810;
+            --accent-color: #a63e14;
+            --text-color: #1a1a1a;
+            --paper-color: #f4ecd8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #2c1810;
+            /* Darker fallback */
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-color);
+            position: relative;
+        }
+
+        .poster-container {
+            width: 100%;
+            min-height: 100vh;
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            /* REMOVED padding to ensure full bleed and no 'frame' effect */
+        }
+
+        /* Overlay to improve readability if needed */
+        .content-overlay {
+            background-color: rgba(255, 255, 245, 0.75);
+            /* Increased transparency */
+            padding: 60px;
+            border-radius: 40px;
+            backdrop-filter: blur(20px);
+            /* Stronger blur to keep text readable */
+            width: 100%;
+            max-width: 800px;
+            /* Keeps the readable width */
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            /* Ensure it stays on top */
+            z-index: 10;
+        }
+
+        .date-section {
+            margin-bottom: 30px;
+        }
+
+        h1.date {
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1.1;
+            margin-bottom: 5px;
+            letter-spacing: -1px;
+        }
+
+        .time {
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: var(--accent-color);
+        }
+
+        .title-section {
+            margin: 40px 0;
+        }
+
+        h2.main-title {
+            font-family: 'Caveat', cursive;
+            font-size: 8rem;
+            color: var(--primary-color);
+            line-height: 0.9;
+            text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
+            transform: rotate(-3deg);
+            margin: 0 -20px;
+            /* Slight optical correction */
+        }
+
+        .details-section {
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            line-height: 1.4;
+            font-weight: 400;
+        }
+
+        .activities {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .invitation-text {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        .bring-items {
+            font-style: italic;
+        }
+
+        .footer-section {
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            border-top: 2px solid var(--accent-color);
+            padding-top: 20px;
+            width: 100%;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 0;
+            }
+
+            body {
+                background-color: transparent;
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+                overflow: hidden;
+            }
+
+            .poster-container {
+                width: 210mm;
+                height: 297mm;
+                padding: 0;
+                /* Remove padding for print to let bg fill */
+                min-height: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .content-overlay {
+                width: 85%;
+                /* Restore A4 proportion width */
+                max-width: none;
+                padding: 40px;
+                /* Slightly tighter for print */
+                box-shadow: none;
+                /* Shadow doesn't print well usually */
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                /* Subtle border for print definition substitute */
+            }
+
+            h1.date {
+                font-size: 4rem;
+            }
+
+            .time {
+                font-size: 3rem;
+            }
+
+            h2.main-title {
+                font-size: 6.5rem;
+            }
+
+            .details-section {
+                font-size: 2rem;
+            }
+
+            .invitation-text {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="poster-container">
+        <div class="content-overlay">
+            <div class="date-section">
+                <h1 class="date">Donnerstag, 05.02.</h1>
+                <div class="time">18.00 Uhr</div>
+            </div>
+
+            <div class="title-section">
+                <h2 class="main-title">"Kultur am Eck"</h2>
+            </div>
+
+            <div class="details-section">
+                <span class="activities">Mit Lagerfeuer, Angrillen,<br>Bewegung und KI</span>
+                <div class="invitation-text">
+                    Herzliche Einladung!<br>
+                    <span class="bring-items">Sei dabei mit weiteren Beiträgen, Getränk, Gebäck</span>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <p><strong>P.S.</strong> Findet bei jedem Wetter statt,<br>kleiner Grillrost überm Feuer verfügbar</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
