@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kultur am Eck – August 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #173b5e; --green: #2f6b2f; --accent: #c85a1c; --paper: #fff7df; --ink: #1b211d; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { min-height: 100vh; background: #173b5e; color: var(--ink); font-family: 'Outfit', sans-serif; }
+        .poster { min-height: 100vh; padding: 5vh 5vw; display: flex; align-items: center; justify-content: center;
+            background: url('../Mai 2026/background.png') center / cover no-repeat; }
+        .card { width: min(100%, 900px); padding: 48px 54px 40px; text-align: center; border: 2px solid rgba(23,59,94,.25);
+            border-radius: 38px; background: rgba(255,250,232,.91); box-shadow: 0 20px 55px rgba(0,0,0,.28); }
+        .anniversary { display: inline-block; padding: 8px 25px 9px; color: white; background: var(--green); border-radius: 999px;
+            font-size: 1.45rem; font-weight: 700; letter-spacing: .02em; }
+        .title { margin: 14px 0 2px; color: var(--primary); font-family: 'Caveat', cursive; font-size: 7.2rem; line-height: .82; transform: rotate(-2deg); }
+        .date { margin-top: 30px; color: var(--primary); font-size: 3.15rem; line-height: 1.05; font-weight: 700; }
+        .time { margin-top: 5px; color: var(--accent); font-size: 2.45rem; font-weight: 300; }
+        .highlight { margin: 27px auto 23px; padding: 17px 24px; border: 3px solid var(--accent); border-radius: 18px; color: var(--primary);
+            background: #fff0c5; font-size: 2.05rem; line-height: 1.15; font-weight: 700; }
+        .program { color: var(--green); font-size: 1.72rem; line-height: 1.35; font-weight: 700; }
+        .invitation { margin-top: 19px; font-size: 1.55rem; line-height: 1.35; }
+        .bring { font-style: italic; }
+        .footer { margin-top: 28px; padding-top: 17px; border-top: 2px solid var(--accent); color: var(--primary); font-size: 1.12rem; line-height: 1.35; }
+        @media print {
+            @page { size: A4 portrait; margin: 0; }
+            html, body, .poster { width: 210mm; height: 297mm; min-height: 0; overflow: hidden; }
+            .poster { padding: 12mm 10mm; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .card { width: 100%; height: 100%; padding: 36px 38px 30px; box-shadow: none; display: flex; flex-direction: column; justify-content: center; }
+            .anniversary { font-size: 1.25rem; }
+            .title { font-size: 6.2rem; }
+            .date { margin-top: 25px; font-size: 2.75rem; }
+            .time { font-size: 2.15rem; }
+            .highlight { margin: 22px auto 18px; font-size: 1.72rem; }
+            .program { font-size: 1.48rem; }
+            .invitation { font-size: 1.35rem; }
+            .footer { margin-top: auto; font-size: 1rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="poster">
+        <section class="card" aria-label="Einladung Kultur am Eck August 2026">
+            <div class="anniversary">1 Jahr Kultur am Eck</div>
+            <h1 class="title">Kultur am Eck</h1>
+            <div class="date">Donnerstag, 06.08.2026</div>
+            <div class="time">ab 18:00 Uhr</div>
+
+            <div class="highlight">Jubiläums-Highlight:<br>ein Kasten selbst gebrautes Bier</div>
+
+            <div class="program">Mit Liedern, Musik, Gedichten und weiteren Beiträgen<br>für Klein und Groß</div>
+            <div class="invitation">
+                Herzliche Einladung!<br>
+                <span class="bring">Sei dabei mit einem kulturellen Beitrag, Getränk, Gebäck oder Kuchen.</span><br>
+                Dazu wieder Feuerschale, Gespräche und – je nach Wetter – Grillen oder Stockbrot.
+            </div>
+
+            <div class="footer"><strong>Findet bei jedem Wetter statt.</strong><br>Kleiner Grillrost überm Feuer verfügbar.</div>
+        </section>
+    </main>
+</body>
+
+</html>
